@@ -16,6 +16,7 @@ prefix=$2       # Nom du prefix
 N=$3            # Nombre de fichiers
 M=$4            # ecart en millisecondes
 
+bucket_name="projet-shell"
 
 # Creer le dossier de sortie
 folder_name="${repo}"
@@ -34,6 +35,12 @@ for ((i=0; i<N; i++)); do
 
   # Creer le fichier vide
   touch "$folder_name/$filename"
+  
+  echo "folder_name : $folder_name/$filename"
+
+  # Uploder sur S3
+  aws s3 cp "$folder_name/$filename" "s3://$bucket_name/$folder_name/$filename"
+
   echo "Fichier $((i + 1)) créer : $filename"
 
   # Pause apres la creation de chaque fichier
@@ -45,8 +52,10 @@ for ((i=0; i<N; i++)); do
 
 done
 
-echo "Operation effectuer avec succes !"
+# Supprimer le repertoire en local
+rm -r "$folder_name"
 
+echo "Operation effectuer avec succes !"
 
 
 
