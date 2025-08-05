@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Verifie si on a bien 4 arguments
+# Verifie si on a bien 4 parametres
 if [ $# -ne 4 ]; then
-  echo "Parametres attendus: $0 <repo_name> <prefix> <N> <M>"
+  echo "Commande attendue: $0 <repo_name> <prefix> <N> <M>"
   echo "  <repo_name> : Nom du repo"
   echo "  <prefix> : Nom du prefix"
   echo "  <N>      : nombre de fichiers a creer"
@@ -45,7 +45,7 @@ for ((i=0; i<N; i++)); do
 
 done
 
-echo "Fichier créer avec succés !"
+echo "Operation effectuer avec succes !"
 
 
 
