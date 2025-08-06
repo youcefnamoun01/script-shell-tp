@@ -12,17 +12,15 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 
 ### Travail demandé
 
- 1- Création de fichiers: Développer un script Shell pour automatiser la création d’un répertoire, puis générer N fichiers toutes les M millisecondes, en les nommant avec un préfixe suivi d’un timestamp: "prefix_year-month-day-hour-minute-second-millisecond.txt".
+ 1- **Création de fichiers**: Développer un script Shell pour automatiser la création d’un répertoire, puis générer N fichiers toutes les M millisecondes, en les nommant avec un préfixe suivi d’un timestamp: "prefix_year-month-day-hour-minute-second-millisecond.txt".
 
  Exemple : 
  
  Créer 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le repertoire "repo_devops" donne le résultat suivant:
  
- repo_devops/
- ├── git_2023-06-29-12-42-19-64.txt
- └── git_2023-06-29-12-45-01-34.txt
+ <pre> ``` repo_devops/ ├── git_2023-06-29-12-42-19-64.txt └── git_2023-06-29-12-45-01-34.txt ``` </pre>
 
- 2- Réorganisation du repertoire: Développer un script Shell qui se base sur le repertoire et les fichiers créer par le premier script puis les réorganisent en suivant une oborescence temporelle.
+ 2- **Réorganisation du repertoire** : Développer un script Shell qui se base sur le repertoire et les fichiers créer par le premier script puis les réorganisent en suivant une oborescence temporelle.
 
  Exemple : 
  
@@ -32,3 +30,11 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 
 
 ### Contribution
+
+**creation_script.sh**
+
+Pour lancer le script il faut éxécuter la commande suivant : ```./creation_script.sh repo_devops git 2 2```
+
+1- Verification des parametres d'entrée du script:
+
+ ![Diagramme](images/check.png)
