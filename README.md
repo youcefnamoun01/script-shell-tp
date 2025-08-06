@@ -112,3 +112,21 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
   6- Exécution complète:
 
  ![Diagramme](images/execut_2.png)
+
+ **main.sh** (bonus)
+
+ Ce script permet d'automatiser la création et la réorganisation de plusieurs fichiers à la fois.
+
+  Pour lancer le script il faut éxécuter la commande suivant : ```./main.sh repo_devops:[linux,git,aws] 2 2```
+
+ 1- Vérification des paramètres  d'entrées de la commande:
+
+ ![Diagramme](images/check_4.png)
+
+ Sinon ça retourne un message :
+
+ ![Diagramme](images/log_4.png)
+
+  2- Récuperation des paramètres dans le script :
+
+ ![Diagramme](images/params_2.png)
