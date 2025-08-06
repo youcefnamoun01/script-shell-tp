@@ -130,3 +130,11 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
   2- Récuperation des paramètres dans le script :
 
  ![Diagramme](images/params_2.png)
+
+ 3- Extraction du nom du repo et des prefixes :
+
+ ![Diagramme](images/repo_2.png)
+
+ 3- Extraction des prefixes:
+
+ ![Diagramme](images/prefix.png)
