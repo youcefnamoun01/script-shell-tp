@@ -29,7 +29,7 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
  ![Diagramme](images/arborescence.png)
 
 
-### Contribution
+### Contributions
 
 **creation_script.sh**
 
@@ -48,6 +48,10 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
  ![Diagramme](images/params.png)
 
  3- Création du repertoire :
- 
+
  ![Diagramme](images/repo.png)
+
+  4- Création des fichiers :
+
+ ![Diagramme](images/file_1.png)
 
