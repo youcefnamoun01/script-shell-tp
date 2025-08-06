@@ -1,12 +1,26 @@
 # TP Linux/ Shell
 
 
-L'objectif de ce TP est de créer 2 scripts Shell pour automatiser la **création** et la **réorganisation** des fichiers, en respectant une structure temporelle et logique précise.
-
+L'objectif de ce TP est de créer des scripts Shell pour automatiser la **création**, la **réorganisation** et le **transfert vers AWS S3** de fichiers, en respectant une structure temporelle et arborescence précise.
 
 ### Les scripts
 
-- **creation_script.sh** : crée un répertoire avec N fichiers vides nommés avec un préfixe et un timestamp.
-- **reorganization_script.sh** : réorganise les fichiers en arborescence temporelle et les remplit avec des métadonnées.
+- **creation_script.sh** : crée un répertoire avec N fichiers chaque M millisecondes.
+- **reorganization_script.sh** : réorganise les fichiers en arborescence temporelle.
 - **main.sh** : script d’orchestration : exécute les 2 scripts ci-dessus dans l’ordre.
+
+
+### Objectifs demandés
+
+ 1- Création : Créer un repertoire qui contient N fichiers nommée avec un préfixe et un timestamp "prefix_year-month-day-hour-minute-second-millisecond.txt"
+ exemples : ./creation_script.sh repo_devops git 2 2
+ Cree 2 fichier avec un intervale de 2 ms et un prefix "git" dans le repertoire "repo_devops"
+
+ git_2023-06-29-12-42-19-64.txt et git_2023-06-29-12-45-01-34.txt
+ 
+ 2- Réorganisation : réorganiser les fichiers créer en suivante l'oborescence suivante.
+
+ Exemple : les fichiers suivants git_2023-06-29-12-42-19-64.txt et git_2023-06-29-12-45-01-34.txt seront sous la forme de cette arborescence
+
+ ![Diagramme](images/arborescence.png)
 
