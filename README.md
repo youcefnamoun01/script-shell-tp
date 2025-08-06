@@ -96,7 +96,15 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
  ![Diagramme](images/file_2.png)
 
  4- Permisisons:
- 
- Changer les permissions pour que seul le propriétaire peut voir leurs contenue
+
+ Changer les permissions pour que seul le propriétaire peut voir le contenue des fichiers
 
  ![Diagramme](images/permission.png)
+
+  5- Chargement sur AWS S3 (bonus):
+
+  Charger le repertoire reorganiser sur une bucket s3
+
+ ![Diagramme](images/aws3.png)
+
+ ![Diagramme](images/aws4.png)
