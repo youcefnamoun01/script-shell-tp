@@ -26,7 +26,7 @@ prefix_array=($prefix_list)
 
 # Création du répertoire et des fichiers
 for prefix in "${prefix_array[@]}"; do
-    ./creation_script.sh "$repo" "$prefix" "$N" "$M"
-    ./reorganization_script.sh "$repo"
+    ./script/creation_script.sh "$repo" "$prefix" "$N" "$M"
+    ./script/reorganization_script.sh "$repo"
 done
 
