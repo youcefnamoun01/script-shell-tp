@@ -50,7 +50,7 @@ for file_path in "$source_dir"/*.txt; do
   mkdir -p "$dest_dir"
 
   # Nouveau nom de fichier
-  new_name="${minute}${second}${millisec}.txt"
+  new_name="${minute}${second}${millisec}.dat"
 
 
   # Déplacement et renommage
