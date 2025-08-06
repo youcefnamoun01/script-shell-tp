@@ -43,9 +43,11 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/log_1.png)
 
-2- Récuperation des paramètres dans le script :
+ 2- Récuperation des paramètres dans le script :
+
  ![Diagramme](images/params.png)
 
-3- Création du repertoire :
+ 3- Création du repertoire :
+ 
  ![Diagramme](images/repo.png)
 
