@@ -47,7 +47,6 @@ for ((i=0; i<N; i++)); do
   if [ $i -lt $((N - 1)) ]; then
     sleep_time="${M}e-3"
     sleep "$sleep_time"
-    echo "sleep_time : $sleep_time"
   fi
 
 done

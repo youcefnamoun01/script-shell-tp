@@ -7,7 +7,17 @@ if [ $# -ne 1 ]; then
   exit 1
 fi
 
+# Nom de la bucket S3
+bucket_name="projet-shell"
+
+# Récupération du nom du répertoire source
 source_dir="$1"
+
+# Copier le repertoire source depuis S3
+aws s3 cp "s3://$bucket_name/$source_dir/" "$source_dir" --recursive
+
+# Supprimer le répertoire source sur S3
+aws s3 rm "s3://$bucket_name/$source_dir/" --recursive
 
 # Vérifie que le répertoire source existe
 if [ ! -d "$source_dir" ]; then
@@ -15,14 +25,11 @@ if [ ! -d "$source_dir" ]; then
   exit 1
 fi
 
+
 # Parcours tous les fichiers
 for file_path in "$source_dir"/*.txt; do
-
-  # Vérifie si le fichier existe
  [ -e "$file_path" ] || continue
   filename=$(basename "$file_path")
-
-  # Extraction du prefix et de la date
   prefix=$(echo "$filename" | cut -d'_' -f1)
   date_part=$(echo "$filename" | cut -d'_' -f2 | sed 's/.txt//')
 
@@ -42,11 +49,13 @@ for file_path in "$source_dir"/*.txt; do
   # Nouveau nom de fichier
   new_name="${minute}${second}${millisec}.txt"
 
+
   # Déplacement et renommage
   mv "$file_path" "$dest_dir/$new_name"
 
   # Permissions
   chmod 600 "$dest_dir/$new_name"
-
-  echo "Réorganisation terminée dans '$source_dir'."
 done
+
+aws s3 cp "$source_dir" "s3://$bucket_name/$source_dir/" --recursive
+echo "Réorganisation terminée dans '$source_dir'."
