@@ -80,3 +80,11 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
  Sinon ça retourne un message :
 
  ![Diagramme](images/log_2.png)
+
+ 2- Vérification du repertoire :
+
+ ![Diagramme](images/check_3_2.png)
+
+ Sinon ça retourne un message si le repertoire n'existe pas:
+
+ ![Diagramme](images/log_3.png)
