@@ -68,3 +68,15 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
  6- Exécution complète:
 
  ![Diagramme](images/execut_1.png)
+
+ **reorganization_script.sh**
+
+ Pour lancer le script il faut éxécuter la commande suivant : ```./reorganization_script.sh repo_devops```
+
+ 1- Vérification des paramètres  d'entrées de la commande:
+
+ ![Diagramme](images/check_2.png)
+
+ Sinon ça retourne un message :
+
+ ![Diagramme](images/log_2.png)
