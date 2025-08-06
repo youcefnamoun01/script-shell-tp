@@ -31,7 +31,7 @@ aws s3 rm "s3://$bucket_name/$source_dir/" --recursive
 
 # Parcours tous les fichiers
 for file_path in "$source_dir"/*.txt; do
- [ -e "$file_path" ] || continue
+  [ -e "$file_path" ] || continue
   filename=$(basename "$file_path")
   prefix=$(echo "$filename" | cut -d'_' -f1)
   date_part=$(echo "$filename" | cut -d'_' -f2 | sed 's/.txt//')

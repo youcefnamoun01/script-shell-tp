@@ -18,7 +18,12 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
  
  Créer 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le repertoire "repo_devops" donne le résultat suivant:
  
- <pre> ``` repo_devops/ ├── git_2023-06-29-12-42-19-64.txt └── git_2023-06-29-12-45-01-34.txt ``` </pre>
+ <pre> repo_devops/ 
+ 
+ ├── git_2023-06-29-12-42-19-64.txt 
+ └── git_2023-06-29-12-45-01-34.txt 
+ 
+ </pre>
 
  2- **Réorganisation du repertoire** : Développer un script Shell qui se base sur le repertoire et les fichiers créer par le premier script puis les réorganisent en suivant une oborescence temporelle.
 
