@@ -35,6 +35,10 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 
 Pour lancer le script il faut éxécuter la commande suivant : ```./creation_script.sh repo_devops git 2 2```
 
-1- Verification des parametres d'entrée du script:
+1- Vérification des parametres d'entrées du script:
 
  ![Diagramme](images/check.png)
+
+ Sinon ça retourne un message :
+
+ ![Diagramme](images/log_1.png)
