@@ -54,7 +54,7 @@ done
 # Supprimer le repertoire en local
 rm -r "$folder_name"
 
-echo "Creation des fichiers terminée dans '$source_dir'"
+echo "Creation des fichiers terminée dans '$folder_name'"
 
 
 

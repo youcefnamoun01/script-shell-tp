@@ -54,6 +54,7 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
   4- Création des fichiers :
 
   Une boucle for permet de créer les fichiers un par un avec un intervale de 2ms via la fonction "sleep_time"
+
  ![Diagramme](images/file_1.png)
 
  5- Chargement sur AWS S3 (bonus):
@@ -64,3 +65,6 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/aws_2.png)
 
+ 6- Exécution complète:
+
+ ![Diagramme](images/execut_1.png)
