@@ -10,21 +10,25 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 - **main.sh** : script d’orchestration : exécute les 2 scripts ci-dessus dans l’ordre.
 
 
-### Objectifs demandés
+### Travail demandé
 
- 1- Création de fichiers: Créer un repertoire qui contient N fichiers nommée avec un préfixe et un timestamp : "prefix_year-month-day-hour-minute-second-millisecond.txt".
-
- Exemple : 
- 
- `./creation_script.sh repo_devops git 2 2`
-
- Crée 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le repertoire "repo_devops" : git_2023-06-29-12-42-19-64.txt et git_2023-06-29-12-45-01-34.txt
- 
- 2- Réorganisation du repertoire: réorganiser les fichiers créer en suivante l'oborescence suivante.
+ 1- Création de fichiers: Développer un script Shell pour automatiser la création d’un répertoire, puis générer N fichiers toutes les M millisecondes, en les nommant avec un préfixe suivi d’un timestamp: "prefix_year-month-day-hour-minute-second-millisecond.txt".
 
  Exemple : 
  
- La réorganisation de ces 2 fichiers:  `git_2023-06-29-12-42-19-64.txt ` et  `git_2023-06-29-12-45-01-34.txt ` devra suivre cette arborescence:
+ Créer 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le repertoire "repo_devops" donne le résultat suivant:
+ 
+ repo_devops/
+ ├── git_2023-06-29-12-42-19-64.txt
+ └── git_2023-06-29-12-45-01-34.txt
+
+ 2- Réorganisation du repertoire: Développer un script Shell qui se base sur le repertoire et les fichiers créer par le premier script puis les réorganisent en suivant une oborescence temporelle.
+
+ Exemple : 
+ 
+ La réorganisation de ces 2 fichiers:  `git_2023-06-29-12-42-19-64.txt ` et  `git_2023-06-29-12-45-01-34.txt ` donne cette arborescence:
 
  ![Diagramme](images/arborescence.png)
 
+
+### Contribution
