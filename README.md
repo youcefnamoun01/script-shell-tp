@@ -103,7 +103,7 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
   5- Chargement sur AWS S3 (bonus):
 
-  Charger le repertoire reorganiser sur une bucket s3
+ Charger le repertoire reorganiser sur une bucket s3
 
  ![Diagramme](images/aws3.png)
 
