@@ -4,30 +4,32 @@
 if [ $# -ne 4 ]; then
   echo "Commande attendue: $0 <repo_name> <prefix> <N> <M>"
   echo "  <repo_name> : Nom du repo"
-  echo "  <prefix> : Nom du prefix"
-  echo "  <N>      : nombre de fichiers a creer"
-  echo "  <M>      : ecart en millisecondes"
+  echo "  <prefix>    : Nom du prefix"
+  echo "  <N>         : nombre de fichiers"
+  echo "  <M>         : ecart en millisecondes"
   exit 1
 fi
 
 # Recuperation des parametres
-repo=$1       # Nom du repertoire
+repo=$1         # Nom du repertoire
 prefix=$2       # Nom du prefix
 N=$3            # Nombre de fichiers
-M=$4            # ecart en millisecondes
+M=$4            # Ecart en millisecondes
 
+# Nom de la bucket S3
 bucket_name="projet-shell"
 
-# Creer le dossier de sortie
+# Creation du repertoire
 folder_name="${repo}"
 mkdir -p "$folder_name"
 
-echo "Creation de $N fichiers dans le dossier '$folder_name' avec un delai de $M ms"
+echo "Creation de $N fichiers dans le repertoire '$folder_name' avec un delai de $M ms"
 
 
 # Boucle de creation des fichiers
 for ((i=0; i<N; i++)); do
-  # Genere un timestamp avec millisecondes
+
+  # Generer un timestamp avec millisecondes
   timestamp=$(date +"%Y-%m-%d-%H-%M-%S-")$(date +"%3N")
 
   # Creer le nom du fichier
@@ -35,13 +37,11 @@ for ((i=0; i<N; i++)); do
 
   # Creer le fichier vide
   touch "$folder_name/$filename"
-  
-  echo "folder_name : $folder_name/$filename"
-
-  # Uploder sur S3
-  aws s3 cp "$folder_name/$filename" "s3://$bucket_name/$folder_name/$filename"
 
   echo "Fichier $((i + 1)) créer : $filename"
+  
+  # Uploder sur S3
+  aws s3 cp "$folder_name/$filename" "s3://$bucket_name/$folder_name/$filename"
 
   # Pause apres la creation de chaque fichier
   if [ $i -lt $((N - 1)) ]; then
@@ -54,7 +54,7 @@ done
 # Supprimer le repertoire en local
 rm -r "$folder_name"
 
-echo "Operation effectuer avec succes !"
+echo "Creation des fichiers terminée dans '$source_dir'"
 
 
 

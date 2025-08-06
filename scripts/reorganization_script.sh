@@ -10,20 +10,23 @@ fi
 # Nom de la bucket S3
 bucket_name="projet-shell"
 
-# Récupération du nom du répertoire source
+# Récupération du répertoire source
 source_dir="$1"
+
+# Vérifie que le répertoire source existe sur S3
+if ! aws s3 ls "s3://$bucket_name/$source_dir/" | grep -q .; then
+  echo "Erreur : le répertoire '$source_dir' n'existe pas sur S3."
+  exit 1
+fi
+
+echo "Réorganisation des fichiers dans le repertoire '$source_dir'"
+
 
 # Copier le repertoire source depuis S3
 aws s3 cp "s3://$bucket_name/$source_dir/" "$source_dir" --recursive
 
 # Supprimer le répertoire source sur S3
 aws s3 rm "s3://$bucket_name/$source_dir/" --recursive
-
-# Vérifie que le répertoire source existe
-if [ ! -d "$source_dir" ]; then
-  echo "Erreur : le répertoire '$source_dir' n'existe pas."
-  exit 1
-fi
 
 
 # Parcours tous les fichiers
@@ -57,5 +60,10 @@ for file_path in "$source_dir"/*.txt; do
   chmod 600 "$dest_dir/$new_name"
 done
 
+# Uploader le répertoire source sur S3
 aws s3 cp "$source_dir" "s3://$bucket_name/$source_dir/" --recursive
-echo "Réorganisation terminée dans '$source_dir'."
+
+# Supprimer le repertoire en local
+rm -r "$source_dir"
+
+echo "Réorganisation terminée dans '$source_dir'"
