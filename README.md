@@ -52,6 +52,11 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
  ![Diagramme](images/repo.png)
 
   4- Création des fichiers :
-
+  Une boucle for permet de créer les fichiers un par un avec un intervale de 2ms via la fonction "sleep_time"
  ![Diagramme](images/file_1.png)
+
+ 5- Chargement sur AWS S3 (bonus):
+ Le répertoire et les fichiers crées sont chargées directement sur une bucket S3
+
+ ![Diagramme](images/aws_1.png)
 
