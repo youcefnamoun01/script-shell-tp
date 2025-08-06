@@ -89,8 +89,14 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/log_3.png)
 
- 4- Création des repertoires et déplacements des fichiers :
+ 3- Création des repertoires et déplacements des fichiers :
 
   Une boucle for permet de créer les differents repertoires et de les déplacer dans les bons repertoires
 
  ![Diagramme](images/file_2.png)
+
+ 4- Permisisons:
+ 
+ Changer les permissions pour que seul le propriétaire peut voir leurs contenue
+
+ ![Diagramme](images/permission.png)
