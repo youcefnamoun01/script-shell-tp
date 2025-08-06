@@ -127,7 +127,7 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/log_4.png)
 
-  2- Récuperation des paramètres dans le script :
+ 2- Récuperation des paramètres dans le script :
 
  ![Diagramme](images/params_2.png)
 
@@ -135,6 +135,10 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/repo_2.png)
 
- 3- Extraction des prefixes:
+ 4- Extraction des prefixes:
 
  ![Diagramme](images/prefix.png)
+
+ 5- Création du répertoire et des fichiers avec le script **creation_script.sh** et **reorganization_script.sh**:
+
+ ![Diagramme](images/script.png)
