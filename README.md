@@ -142,3 +142,7 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
  5- Création du répertoire et des fichiers avec le script **creation_script.sh** et **reorganization_script.sh**:
 
  ![Diagramme](images/script.png)
+
+  6- Exécution complète:
+
+ ![Diagramme](images/execut_3.png)
