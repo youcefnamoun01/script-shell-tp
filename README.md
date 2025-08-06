@@ -83,8 +83,14 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  2- Vérification du repertoire :
 
- ![Diagramme](images/check_3_2.png)
+ ![Diagramme](images/check_3.png)
 
  Sinon ça retourne un message si le repertoire n'existe pas:
 
  ![Diagramme](images/log_3.png)
+
+ 4- Création des repertoires et déplacements des fichiers :
+
+  Une boucle for permet de créer les differents repertoires et de les déplacer dans les bons repertoires
+
+ ![Diagramme](images/file_2.png)
