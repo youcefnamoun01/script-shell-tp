@@ -31,8 +31,12 @@ aws s3 rm "s3://$bucket_name/$source_dir/" --recursive
 
 # Parcours tous les fichiers
 for file_path in "$source_dir"/*.txt; do
+
+  # Vérifie si le fichier existe
   [ -e "$file_path" ] || continue
   filename=$(basename "$file_path")
+
+  # Extraction du prefix et de la date
   prefix=$(echo "$filename" | cut -d'_' -f1)
   date_part=$(echo "$filename" | cut -d'_' -f2 | sed 's/.txt//')
 
@@ -52,11 +56,10 @@ for file_path in "$source_dir"/*.txt; do
   # Nouveau nom de fichier
   new_name="${minute}${second}${millisec}.dat"
 
-
   # Déplacement et renommage
   mv "$file_path" "$dest_dir/$new_name"
 
-  # Permissions
+  # Permissions propriétaire
   chmod 600 "$dest_dir/$new_name"
 done
 

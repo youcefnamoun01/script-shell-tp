@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Verifie si on a bien 3 parametres
+# Verifie si on a bien 4 parametres
 if [ $# -ne 3 ]; then
   echo "Commande attendue: $0 <repo_name:[prefix1,prefix2,prefix3]> <N> <M>"
   echo "  <repo_name> : Nom du repo"
@@ -29,4 +29,3 @@ for prefix in "${prefix_array[@]}"; do
     ./scripts/creation_script.sh "$repo" "$prefix" "$N" "$M"
     ./scripts/reorganization_script.sh "$repo"
 done
-
