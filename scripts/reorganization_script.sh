@@ -21,22 +21,16 @@ fi
 
 echo "Réorganisation des fichiers dans le repertoire '$source_dir'"
 
-
 # Copier le repertoire source depuis S3
 aws s3 cp "s3://$bucket_name/$source_dir/" "$source_dir" --recursive
 
 # Supprimer le répertoire source sur S3
 aws s3 rm "s3://$bucket_name/$source_dir/" --recursive
 
-
 # Parcours tous les fichiers
 for file_path in "$source_dir"/*.txt; do
-
-  # Vérifie si le fichier existe
   [ -e "$file_path" ] || continue
   filename=$(basename "$file_path")
-
-  # Extraction du prefix et de la date
   prefix=$(echo "$filename" | cut -d'_' -f1)
   date_part=$(echo "$filename" | cut -d'_' -f2 | sed 's/.txt//')
 
@@ -56,11 +50,22 @@ for file_path in "$source_dir"/*.txt; do
   # Nouveau nom de fichier
   new_name="${minute}${second}${millisec}.dat"
 
-  # Déplacement et renommage
-  mv "$file_path" "$dest_dir/$new_name"
+  # Nouveau chemin complet
+  new_filepath="$dest_dir/$new_name"
 
-  # Permissions propriétaire
-  chmod 600 "$dest_dir/$new_name"
+  # Ajout des infos
+  {
+    echo "$filename"
+    echo "$(realpath "$file_path")"
+    echo "creation_script.sh"
+    cat "$file_path"
+  } > "$new_filepath"
+
+  # Suppression de l'ancien fichier
+  rm "$file_path"
+
+  # Permissions
+  chmod 600 "$new_filepath"
 done
 
 # Uploader le répertoire source sur S3
