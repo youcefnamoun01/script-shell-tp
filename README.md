@@ -16,7 +16,7 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 
  Exemple : 
  
- Créer 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le repertoire "repo_devops" donne le résultat suivant:
+ Créer 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le répertoire "repo_devops" donne le résultat suivant:
  
  <pre> repo_devops/ 
  
@@ -25,7 +25,7 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
  
  </pre>
 
- 2- **Réorganisation du repertoire** : Développer un script Shell qui se base sur le repertoire et les fichiers créer par le premier script puis les réorganisent en suivant une oborescence temporelle.
+ 2- **Réorganisation du répertoire** : Développer un script Shell qui se base sur le répertoire et les fichiers créer par le premier script puis les réorganisent en suivant une oborescence temporelle.
 
  Exemple : 
  
@@ -52,7 +52,7 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/params.png)
 
- 3- Création du repertoire :
+ 3- Création du répertoire :
 
  ![Diagramme](images/repo.png)
 
@@ -86,17 +86,17 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/log_2.png)
 
- 2- Vérification du repertoire :
+ 2- Vérification du répertoire :
 
  ![Diagramme](images/check_3.png)
 
- Sinon ça retourne un message si le repertoire n'existe pas:
+ Sinon ça retourne un message si le répertoire n'existe pas:
 
  ![Diagramme](images/log_3.png)
 
- 3- Création des repertoires et déplacements des fichiers :
+ 3- Création des répertoires et déplacements des fichiers :
 
-  Une boucle for permet de créer les differents repertoires et de les déplacer dans les bons repertoires
+  Une boucle for permet de créer les differents répertoires et de les déplacer dans les bons répertoires
 
  ![Diagramme](images/file_2.png)
 
@@ -108,7 +108,7 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
   5- Chargement sur AWS S3 (bonus):
 
- Charger le repertoire reorganiser sur s3
+ Charger le répertoire reorganiser sur s3
 
  ![Diagramme](images/aws_3.png)
 
