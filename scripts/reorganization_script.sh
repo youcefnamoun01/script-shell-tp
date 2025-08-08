@@ -64,7 +64,7 @@ for file_path in "$source_dir"/*.txt; do
   # Suppression de l'ancien fichier
   rm "$file_path"
 
-  # Permissions
+  # Permissions (lecture, écriture) propriétaire
   chmod 600 "$new_filepath"
 done
 
