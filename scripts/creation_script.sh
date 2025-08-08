@@ -21,7 +21,7 @@ bucket_name="projet-shell"
 
 # Creation du repertoire
 folder_name="${repo}"
-mkdir -p "$folder_name"
+mkdir "$folder_name"
 
 echo "Creation de $N fichiers dans le repertoire '$folder_name' avec un delai de $M ms"
 
@@ -32,10 +32,8 @@ for ((i=0; i<N; i++)); do
   # Generer un timestamp avec millisecondes
   timestamp=$(date +"%Y-%m-%d-%H-%M-%S-")$(date +"%3N")
 
-  # Creer le nom du fichier
-  filename="${prefix}_${timestamp}.txt"
-
   # Creer le fichier vide
+  filename="${prefix}_${timestamp}.txt"
   touch "$folder_name/$filename"
 
   echo "Fichier $((i + 1)) créer : $filename"
