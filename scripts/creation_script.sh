@@ -6,7 +6,7 @@ if [ $# -ne 4 ]; then
   echo "  <repo_name> : Nom du repo"
   echo "  <prefix>    : Nom du prefix"
   echo "  <N>         : nombre de fichiers"
-  echo "  <M>         : ecart en millisecondes"
+  echo "  <M>         : Ecart en millisecondes"
   exit 1
 fi
 

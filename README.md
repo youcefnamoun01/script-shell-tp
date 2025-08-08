@@ -7,7 +7,7 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 
 - **creation_script.sh** : crée un répertoire avec N fichiers, chaque M millisecondes.
 - **reorganization_script.sh** : réorganise les fichiers en arborescence temporelle.
-- **main.sh** : script d’orchestration : exécute les 2 scripts ci-dessus dans l’ordre.
+- **main.sh** : script d’orchestration qui exécute les 2 scripts ci-dessus dans l’ordre.
 
 
 ### Travail demandé
@@ -16,7 +16,7 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 
  Exemple : 
  
- Créer 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le répertoire "repo_devops" donne le résultat suivant:
+ Créer 2 fichiers avec un intervale de 2 ms et un prefix "git" dans le répertoire "repo_devops" :
  
  <pre> repo_devops/ 
  
@@ -29,7 +29,7 @@ L'objectif de ce TP est de créer des scripts Shell pour automatiser la **créat
 
  Exemple : 
  
- La réorganisation de ces 2 fichiers:  `git_2023-06-29-12-42-19-64.txt ` et  `git_2023-06-29-12-45-01-34.txt ` donne cette arborescence:
+ La réorganisation de ces 2 fichiers:  `git_2023-06-29-12-42-19-64.txt ` et  `git_2023-06-29-12-45-01-34.txt ` :
 
  ![Diagramme](images/arborescence.png)
 
@@ -100,7 +100,13 @@ Pour lancer le script il faut éxécuter la commande suivant : ```./creation_scr
 
  ![Diagramme](images/file_2.png)
 
- 4- Permisisons:
+ 4- Ajout d'informations dans le fichier:
+
+ Ajouter dans le fichier déplacé des informations concernant (l'ancien nom de fichier, son chemin et le nom du script qui l’a créé)
+
+ ![Diagramme](images/infos.png)
+
+ 5- Permisisons:
 
  Changer les permissions pour que seul le propriétaire peut voir le contenue des fichiers
 

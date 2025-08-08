@@ -53,7 +53,7 @@ for file_path in "$source_dir"/*.txt; do
   # Nouveau chemin complet
   new_filepath="$dest_dir/$new_name"
 
-  # Ajout des infos
+  # Ajout des infos dans le fichier
   {
     echo "$filename"
     echo "$(realpath "$file_path")"
