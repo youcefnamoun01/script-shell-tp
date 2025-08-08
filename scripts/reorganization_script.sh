@@ -66,6 +66,7 @@ for file_path in "$source_dir"/*.txt; do
 
   # Permissions (lecture, écriture) propriétaire
   chmod 600 "$new_filepath"
+  
 done
 
 # Uploader le répertoire source sur S3
